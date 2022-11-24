@@ -1,0 +1,375 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: normal;
+}
+
+.grid-container {
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 120px auto 100px;
+    grid-template-areas: 
+    header header
+    main main
+    footer footer;
+}
+
+body {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+    font-family: 'Arimo', sans-serif;
+}
+/*-------------HEADER--------------*/
+.encabezado {
+    display: grid;
+    grid-area: header;
+}
+header {
+    margin: 25px;
+    padding-right: 70px;
+    padding-left: 50px;
+    padding: 2rem;
+    background-image: url(./img/fondo.png);
+    border-radius: 10px;
+}
+
+header nav img {
+    width: 140px;
+    background-color: rgb(48, 35, 3);
+    padding: 0.5rem;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+header nav ul {
+    background-color: rgb(58, 35, 3);
+}
+header nav ul li{
+    list-style: none;
+    padding: 0.3rem;
+    padding-top: 0.5em;
+}
+header nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:  white;
+    padding: 5px;
+}
+header nav ul li a:hover{
+    color: #6452AC;
+}
+
+/*-------------MAIN--------------*/
+
+.contenido {
+    display: grid;
+    grid-area: main;
+}
+main .about p {
+    color: aliceblue;
+    font-size: 5rem;
+    margin: 25px;
+    padding-left: 4rem;
+}
+main .about h2 {
+    color: aliceblue;
+    margin: 25px;
+    padding-top: 20px;
+}
+main .catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 0;
+}
+
+main .catalogo .tarjeta {
+    background-color: aliceblue;
+    margin: 22px;
+    width: 430px;
+    height: 430px;
+    border-radius: 60%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    transition-property: border-radius;
+    transition-duration: 2s;
+    /**width:20%;
+    height:auto;**/
+}
+
+main .catalogo .tarjeta:hover {
+    border-radius: 30%;
+}
+
+main .catalogo .tarjeta img{
+    width: 250%;
+    height: 100%;
+}
+
+main .catalogo .servicio{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: xx-large;
+    color: white;
+    text-transform: lowercase;
+}
+main .catalogo .ver-mas {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: medium;
+    color: white;
+    text-transform: lowercase;
+}
+main .catalogo .ver-mas:hover{
+    font-weight: bolder;
+}
+main .detalle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .detalle div{
+    width: 600px;
+    text-align: center;
+}
+main .detalle h1 {
+    font-size: 4rem;
+    color: white;
+    text-transform: lowercase;
+    padding: 2rem;
+}
+main .detalle p {
+    font-size: 1.2rem;
+    color: white;
+    padding: 2rem;
+}
+
+/*-------------VIEW CATÁLOGO DE SERVICIOS--------------*/
+
+.about .contenedorServicios {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin-left: 4rem;
+}
+.about .contenedorServicios h2{
+    font-size: 3rem;
+    color: white;
+    text-transform: lowercase;
+    padding: 2rem;
+    padding-top: 3rem;
+    text-align: center;
+}
+.about .contenedorServicios .tarjetaServicioContainer img{
+    padding: 3rem;
+    transition: transform .2s;
+}
+.about .contenedorServicios .tarjetaServicioContainer {
+    display: flex;
+    justify-content: center;
+}
+.about .contenedorServicios .tarjetaServicioContainer img:hover{
+    transform: scale(1.1);
+}
+.detalleServicio {
+    display: flex;
+    margin: 4rem;
+    background-color: rgb(58, 35, 3);
+    border-radius: 10%;
+}
+.detalleServicio img {
+    width: 100vh;
+    height: auto;
+}
+.detalleServicio h1 {
+    font-size: 1.5rem;
+    color: white;
+    padding: 2rem;
+    padding-top: 4rem;
+    text-align: center;
+}
+.detalleServicio p {
+    color: white;
+    padding: 3rem;
+    padding-top: 0;
+    line-height: 2rem;
+}
+
+.consulta {
+    color: white;
+    margin: 4rem;
+    width: 800px;
+}
+.form {
+    display: flex;
+    width: 100vh;
+    min-height: 90vh;
+    background-color: rgb(253, 208, 177);
+    margin-left: 350px;
+}
+
+/*-------------FOOTER--------------*/
+.foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer {
+    display: grid;
+    grid-area: footer;
+    margin: 2rem;
+  }
+  footer img {
+    width: 70px;
+  }
+  footer img:hover {
+    opacity: 0.5;
+  }
+
+  .float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	border-radius:50px;
+	text-align:center;
+    font-size:30px;
+    z-index:100;
+}
+.bi-arrow-up-circle-fill {
+    color: white;
+    margin: 2rem;
+    margin-bottom: 1rem;
+    font-size: xx-large;
+    position:fixed;
+	width:60px;
+	height:60px;
+	bottom:1px;
+	right:1200px;
+	border-radius:50px;
+	text-align:center;
+    font-size:30px;
+    z-index:100;
+}
+
+/*-------------MEDIA QUERIES--------------*/
+@media (max-width: 1075px) {
+    .contenedorDetalle {
+        display: flex;
+        flex-direction: column;
+    }
+    .detalleServicio {
+        border-radius: 0;
+    }
+    .detalleServicio img {
+        align-self: center;
+        max-width: 400px;
+    }
+    .detalleServicio p {
+        line-height: 1.2rem;
+    }
+} 
+@media (max-width: 870px) {
+    .detalleServicio {
+        padding: 0;
+        margin: 0;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .form {
+        margin: 0.5rem;
+    }
+}
+@media (max-width: 830px) {
+    .detalleServicio img {
+        max-width: 300px;
+    }
+}
+@media (max-width: 768px) {
+    .contenido .about p{
+        font-size: 4rem;
+    }
+    main .detalle h1 {
+        font-size: 3rem;
+        padding: 1.5rem;
+    }
+    main .detalle p {
+        font-size: 1rem;
+        color: white;
+        padding: 1.5rem;
+    }
+}
+@media (max-width: 730px) {
+    .detalleServicio h1 {
+        font-size: medium;
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+    .detalleServicio p{
+        font-size: smaller;
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+    .contenido .about p{
+        font-size: 3rem;
+    }
+    header nav {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+    }
+}
+@media (max-width: 500px) {
+    /*.about .contenedorServicios {
+        margin: 0;
+        padding: 0;
+    }*/
+    .detalleServicio img{
+        max-width: 200px;
+    }
+    .detalleServicio h1 {
+        font-size: small;
+        padding: 0.3rem;
+        margin: 0.3rem;
+    }
+    .detalleServicio p{
+        font-size: smaller;
+        padding: 0.3rem;
+        margin: 0.3rem;
+    }
+    .contenido .about p{
+        font-size: 2.5rem;
+        padding-left: 1.5rem;
+    }
+    header {
+       min-width:100%;
+    }
+    main .detalle h1 {
+        font-size: 2.5rem;
+        padding: 1rem;
+    }
+    main .detalle p {
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+}
