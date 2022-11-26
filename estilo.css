@@ -219,12 +219,15 @@ main .detalle p {
     margin: 4rem;
     width: 800px;
 }
+.formulario {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+}
 .form {
     display: flex;
-    width: 100vh;
     min-height: 90vh;
     background-color: rgb(253, 208, 177);
-    margin-left: 350px;
 }
 
 /*-------------FOOTER--------------*/
@@ -273,7 +276,7 @@ footer {
 }
 
 /*-------------MEDIA QUERIES--------------*/
-@media (max-width: 1075px) {
+@media screen and (max-width: 1075px) {
     .contenedorDetalle {
         display: flex;
         flex-direction: column;
@@ -289,7 +292,7 @@ footer {
         line-height: 1.2rem;
     }
 } 
-@media (max-width: 870px) {
+@media screen and (max-width: 870px) {
     .detalleServicio {
         padding: 0;
         margin: 0;
@@ -297,15 +300,18 @@ footer {
         margin-bottom: 0.5rem;
     }
     .form {
-        margin: 0.5rem;
+        width: 870px;
     }
 }
-@media (max-width: 830px) {
+@media screen and (max-width: 830px) {
     .detalleServicio img {
         max-width: 300px;
     }
+    .form {
+        width: 830px;
+    }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .contenido .about p{
         font-size: 4rem;
     }
@@ -318,8 +324,11 @@ footer {
         color: white;
         padding: 1.5rem;
     }
+    .form {
+        width: 768px;
+    }
 }
-@media (max-width: 730px) {
+@media screen and (max-width: 730px) {
     .detalleServicio h1 {
         font-size: medium;
         padding: 0.5rem;
@@ -338,8 +347,11 @@ footer {
         flex-direction: column;
         width: fit-content;
     }
+    .form {
+        width: 730px;
+    }
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
     /*.about .contenedorServicios {
         margin: 0;
         padding: 0;
@@ -372,4 +384,8 @@ footer {
         font-size: 0.8rem;
         padding: 1rem;
     }
+    .form {
+        width: 500px;
+    }
 }
+
